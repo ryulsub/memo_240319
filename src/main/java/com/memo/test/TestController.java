@@ -16,8 +16,7 @@ public class TestController {
 	
 	@Autowired
 	PostMapper postMapper;
-	
-	
+
 	@ResponseBody
 	@GetMapping("/test1")
 	public String test1() {
@@ -29,12 +28,10 @@ public class TestController {
 	public Map<String, Object> test2() {
 		Map<String, Object> map = new HashMap<>();
 		map.put("a", 1111);
-		map.put("a", 1111);
-		map.put("a", 1111);
-		map.put("a", 1111);
+		map.put("b", 1111);
+		map.put("c", 2222);
 		return map;
 	}
-	
 	
 	@GetMapping("/test3")
 	public String test3() {
