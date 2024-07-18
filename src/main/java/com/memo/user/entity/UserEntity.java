@@ -22,13 +22,11 @@ import lombok.ToString;
 @NoArgsConstructor
 @Builder
 @Getter
-@Table(name= "user")
+@Table(name = "user")
 @Entity
 public class UserEntity {
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
 	private int id;
 	
 	@Column(name = "loginId")

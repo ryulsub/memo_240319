@@ -12,7 +12,7 @@ import com.memo.post.mapper.PostMapper;
 
 @Service
 public class PostBO {
-	
+
 	@Autowired
 	private PostMapper postMapper;
 	
@@ -22,12 +22,19 @@ public class PostBO {
 	// input: 로그인 된 사람의 userId
 	// output: List<Post>
 	public List<Post> getPostListByUserId(int userId) {
-		return postMapper.selectPostListByUserId(userId); 
+		return postMapper.selectPostListByUserId(userId);
+	}
+	
+	// input: userId, postId
+	// output: Post or null
+	public Post getPostByPostIdUserId(int userId, int postId) {
+		return postMapper.SelectPostByPostIdUserId(userId, postId);
 	}
 	
 	
+	
 	// input: 파라미터들
-	// output: x
+	// output: X
 	public void addPost(int userId, String userLoginId, 
 			String subject, String content, MultipartFile file) {
 		
